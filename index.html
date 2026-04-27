@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AutonomyOne | Software at the speed of thought</title>
-  <meta name="description" content="AutonomyOne is preparing to launch autonomous AI software delivery for planning, building, reviewing and deploying digital products.">
+  <meta name="description" content="AutonomyOne creates autonomous AI software delivery for planning, building, reviewing and deploying digital products.">
   <meta name="theme-color" content="#062A49">
   <link rel="icon" type="image/png" href="assets/favicon.png">
+
   <style>
     :root {
       --ink: #062a49;
@@ -14,14 +15,11 @@
       --muted: #5c7083;
       --line: rgba(10, 56, 88, 0.14);
       --white: #ffffff;
-      --mist: #f4fbfc;
       --teal: #2fb7bd;
       --teal-deep: #178d96;
       --cyan: #72e2e7;
-      --glow: rgba(47, 183, 189, 0.22);
       --shadow: 0 24px 80px rgba(6, 42, 73, 0.12);
       --radius-xl: 34px;
-      --radius-md: 20px;
     }
 
     * {
@@ -71,8 +69,7 @@
     .site-header {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 24px;
+      justify-content: flex-start;
       padding: 30px 0 22px;
     }
 
@@ -86,32 +83,6 @@
       display: block;
       width: min(340px, 70vw);
       height: auto;
-    }
-
-    .header-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      white-space: nowrap;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.72);
-      box-shadow: 0 14px 40px rgba(6, 42, 73, 0.08);
-      border-radius: 999px;
-      padding: 10px 15px;
-      color: var(--ink-soft);
-      font-size: 0.88rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      backdrop-filter: blur(14px);
-    }
-
-    .header-pill::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 99px;
-      background: var(--teal);
-      box-shadow: 0 0 0 7px rgba(47, 183, 189, 0.14);
     }
 
     .hero {
@@ -190,30 +161,16 @@
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
     }
 
-    .button.primary {
-      color: var(--white);
-      background: linear-gradient(135deg, var(--ink) 0%, #0c4772 54%, var(--teal-deep) 100%);
-      box-shadow: 0 18px 42px rgba(6, 42, 73, 0.24);
-    }
-
     .button.secondary {
       color: var(--ink-soft);
       background: rgba(255, 255, 255, 0.72);
       border: 1px solid var(--line);
+      box-shadow: 0 14px 40px rgba(6, 42, 73, 0.08);
+      backdrop-filter: blur(14px);
     }
 
     .button:hover {
       transform: translateY(-2px);
-    }
-
-    .button.primary:hover {
-      box-shadow: 0 22px 54px rgba(6, 42, 73, 0.28);
-    }
-
-    .micro {
-      color: var(--muted);
-      font-size: 0.94rem;
-      font-weight: 700;
     }
 
     .hero-panel {
@@ -354,10 +311,29 @@
       line-height: 1.35;
     }
 
-    .node.plan { top: 32px; left: 50%; transform: translateX(-50%); }
-    .node.build { right: 22px; top: 50%; transform: translateY(-50%); }
-    .node.review { bottom: 32px; left: 50%; transform: translateX(-50%); }
-    .node.deploy { left: 22px; top: 50%; transform: translateY(-50%); }
+    .node.plan {
+      top: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .node.build {
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .node.review {
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .node.deploy {
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
     .signal {
       position: absolute;
@@ -366,42 +342,15 @@
       height: 12px;
       border-radius: 999px;
       background: var(--teal);
-      box-shadow: 0 0 0 10px rgba(47, 183, 189, 0.13), 0 0 38px rgba(47, 183, 189, 0.45);
+      box-shadow:
+        0 0 0 10px rgba(47, 183, 189, 0.13),
+        0 0 38px rgba(47, 183, 189, 0.45);
       animation: orbit 10s linear infinite;
       transform-origin: 0 0;
     }
 
-    .metric-row {
-      position: relative;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .metric {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.64);
-      padding: 13px;
-    }
-
-    .metric b {
-      display: block;
-      font-size: 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .metric span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 0.74rem;
-      font-weight: 700;
-    }
-
     .section {
-      padding: 54px 0 34px;
+      padding: 54px 0 44px;
     }
 
     .section-head {
@@ -487,53 +436,24 @@
       font-size: 0.96rem;
     }
 
-    .launch-strip {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      margin: 52px 0 70px;
-      border: 1px solid rgba(255, 255, 255, 0.78);
-      border-radius: var(--radius-xl);
-      padding: 28px;
-      color: var(--white);
-      background:
-        radial-gradient(circle at 78% 20%, rgba(114, 226, 231, 0.28), transparent 28%),
-        linear-gradient(135deg, var(--ink) 0%, #0a416a 55%, #0f8991 100%);
-      box-shadow: 0 28px 82px rgba(6, 42, 73, 0.23);
-    }
-
-    .launch-strip h2 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-    }
-
-    .launch-strip p {
-      margin: 10px 0 0;
-      max-width: 660px;
-      color: rgba(255, 255, 255, 0.74);
-      line-height: 1.6;
-    }
-
-    .launch-strip .button {
-      background: var(--white);
-      color: var(--ink);
-      box-shadow: none;
-      flex: 0 0 auto;
-    }
-
     footer {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      padding: 26px 0 36px;
+      padding: 34px 0 42px;
       border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.92rem;
     }
 
     @keyframes orbit {
-      0% { transform: rotate(0deg) translateX(135px); }
-      100% { transform: rotate(360deg) translateX(135px); }
+      0% {
+        transform: rotate(0deg) translateX(135px);
+      }
+
+      100% {
+        transform: rotate(360deg) translateX(135px);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -566,8 +486,7 @@
       }
 
       .site-header {
-        align-items: flex-start;
-        flex-direction: column;
+        padding-top: 24px;
       }
 
       .hero {
@@ -588,17 +507,26 @@
         min-height: 470px;
       }
 
-      .node.plan { top: 24px; }
-      .node.review { bottom: 24px; }
-      .node.build { right: 16px; }
-      .node.deploy { left: 16px; }
+      .node.plan {
+        top: 24px;
+      }
 
-      .metric-row,
+      .node.review {
+        bottom: 24px;
+      }
+
+      .node.build {
+        right: 16px;
+      }
+
+      .node.deploy {
+        left: 16px;
+      }
+
       .steps {
         grid-template-columns: 1fr;
       }
 
-      .launch-strip,
       footer {
         flex-direction: column;
         align-items: flex-start;
@@ -606,25 +534,31 @@
     }
   </style>
 </head>
+
 <body>
   <div class="shell">
     <header class="site-header" aria-label="Site header">
       <a class="brand" href="/" aria-label="AutonomyOne home">
         <img src="assets/autonomyone-logo.png" alt="AutonomyOne">
       </a>
-      <a class="header-pill" href="mailto:hello@autonomyone.ai?subject=AutonomyOne%20launch%20enquiry">Preparing to launch</a>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Autonomous AI software delivery</p>
-          <h1 id="hero-title">Software at the <span class="gradient-word">speed of thought.</span></h1>
-          <p class="lede">AutonomyOne is preparing a new way to take ideas from intent to live software - quickly, intelligently, and with human control at every critical step.</p>
+
+          <h1 id="hero-title">
+            Software at the <span class="gradient-word">speed of thought.</span>
+          </h1>
+
+          <p class="lede">
+            AutonomyOne is creating a new way to take ideas from intent to live software:
+            quickly, intelligently, and with human control at every critical step.
+          </p>
+
           <div class="cta-row">
-            <a class="button primary" href="mailto:hello@autonomyone.ai?subject=AutonomyOne%20launch%20enquiry">Get launch updates</a>
             <a class="button secondary" href="#workflow">See the workflow</a>
-            <span class="micro">Plan. Build. Review. Deploy.</span>
           </div>
         </div>
 
@@ -634,22 +568,38 @@
               <div class="panel-label">Delivery loop</div>
               <p class="panel-title">From intent to deployment</p>
             </div>
+
             <div class="pulse-chip">AI assisted</div>
           </div>
 
           <div class="loop">
             <div class="signal" aria-hidden="true"></div>
-            <div class="node plan"><strong>PLAN</strong><span>clarify intent and architecture</span></div>
-            <div class="node build"><strong>BUILD</strong><span>generate, compose and integrate</span></div>
-            <div class="node review"><strong>REVIEW</strong><span>test, inspect and improve</span></div>
-            <div class="node deploy"><strong>DEPLOY</strong><span>release with confidence</span></div>
-            <div class="core">Autonomous<br>delivery<br>system</div>
-          </div>
 
-          <div class="metric-row" aria-label="Product principles">
-            <div class="metric"><b>Intent-led</b><span>start with outcomes</span></div>
-            <div class="metric"><b>Human-guided</b><span>control the critical steps</span></div>
-            <div class="metric"><b>Production-ready</b><span>move from idea to live</span></div>
+            <div class="node plan">
+              <strong>PLAN</strong>
+              <span>clarify intent and architecture</span>
+            </div>
+
+            <div class="node build">
+              <strong>BUILD</strong>
+              <span>generate, compose and integrate</span>
+            </div>
+
+            <div class="node review">
+              <strong>REVIEW</strong>
+              <span>test, inspect and improve</span>
+            </div>
+
+            <div class="node deploy">
+              <strong>DEPLOY</strong>
+              <span>release with confidence</span>
+            </div>
+
+            <div class="core">
+              Autonomous<br>
+              delivery<br>
+              system
+            </div>
           </div>
         </aside>
       </section>
@@ -660,7 +610,11 @@
             <p class="kicker">The AutonomyOne method</p>
             <h2 id="workflow-title">Automating the path from concept to release.</h2>
           </div>
-          <p class="section-note">A focused, transparent workflow for creating digital products with AI acceleration - keeping the process simple, visible and accountable.</p>
+
+          <p class="section-note">
+            A focused, transparent workflow for creating digital products with AI acceleration:
+            keeping the process simple, visible and accountable.
+          </p>
         </div>
 
         <div class="steps">
@@ -669,30 +623,25 @@
             <h3>PLAN</h3>
             <p>Translate goals into a clear product direction, scope and delivery path.</p>
           </article>
+
           <article class="step-card">
             <span class="step-number">02</span>
             <h3>BUILD</h3>
             <p>Turn validated intent into working software, integrations and experiences.</p>
           </article>
+
           <article class="step-card">
             <span class="step-number">03</span>
             <h3>REVIEW</h3>
             <p>Inspect quality, test behaviour and refine before anything reaches users.</p>
           </article>
+
           <article class="step-card">
             <span class="step-number">04</span>
             <h3>DEPLOY</h3>
             <p>Move confidently into production with a repeatable release process.</p>
           </article>
         </div>
-      </section>
-
-      <section class="launch-strip" aria-labelledby="launch-title">
-        <div>
-          <h2 id="launch-title">Preparing to launch.</h2>
-          <p>AutonomyOne is building autonomous AI products for faster, smarter software delivery. Product details and early access information are coming soon.</p>
-        </div>
-        <a class="button" href="mailto:hello@autonomyone.ai?subject=AutonomyOne%20early%20access">Contact us</a>
       </section>
     </main>
 
